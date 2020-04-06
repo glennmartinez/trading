@@ -10,6 +10,7 @@ class EmaSimple(QCAlgorithm):
         self.__slow = self.EMA("WORK", 200, Resolution.Hour)
         self.__fast = self.EMA("WORK", 26, Resolution.Hour)
         self.PlotIndicator("WORK", self.__slow, self.stock, self.__fast)
+        self.SetWarmUp(200)
 
         # from System.Drawing import Color
 
